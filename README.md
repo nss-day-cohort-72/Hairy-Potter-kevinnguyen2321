@@ -114,18 +114,17 @@ In the `main.js` module, invoke the `PotteryList` component function. Take its r
 
 **THEN PUSH YOUR CODE TO GITHUB**
 
-
 ## Vocabulary and Understanding
 
 > 🧨 Before you click the "Assessment Complete" button on the Learning Platform, add your answers below for each question and make a commit. It is your option to request a face-to-face meeting with a coach for a vocabulary review.
 
 1. Explain how you got the HTML, with the correct data, displayed in the browser?
-   > Your answer here
+   > In order to get the HTML to display on the browser I created a variable called potteryHtml on main.js. The value of this variable is a string data type of the HTML elements needed to display on the DOM. The potteryHTML variable invokes the potteryList function and that function loops over the array of pottery objects that are for sale and creates the html code for each pottery object. During each iteration it uses template literals to concatenate the html strings then finally it returns the html string data type after it loops over all of the objects for sale. I then created a variable called articleElement which is the article element with the class of potteryList. I then used the innerHTML property on this element and set that value to the potteryHtml variable which returns the html string data.
 2. In the **PotteryList** module, when you iterate your pottery, you need to show the evidence of what the **weight** property's value is for the 2nd piece of pottery. Use [Loom](https://www.loom.com/) to record your browser window with the developer tools open and show those values.
-   > Paste your video's public URL here
+   > Paste your video's public URL here https://www.loom.com/share/358fa3db729546ff85fcf5d98561d9da
 3. The **PotteryWheel** module has a single function named `makePottery`. Why doesn't that module have all of the other code in it?
-   > Your answer here
+   > That module is only responsible for creating pottery. The function makePottery is exported to be able to be used in other modules. main.js is the module that imports certain functions from other modules that it needs and then runs the code from that main.js file. This creates a separate of concerns and also it creates clean easy to read and organized code.
 4. The pottery shop has learned that there is a set of customers that are willing to buy cracked pottery at a discounted price of $2.50. That means that the cracked pottery should now be displayed in the catalog. Explain the changes that this new business strategy would cause to your algorithm.
-   > Your answer here
+   > So in the pottery-catalog module and inside the toSellOrNotSell function we would need to add another conditional so I would add another else if statement basically else if (obj.cracked === true) then obj.price = 2.50. This would check for any pottery objects that have the boolean value of true in the cracked property and if so then add a price property with the value of 2.50. And currently there is a conditional that checks if a object has false for the cracked property before it pushes it to the the array of sellable pottery so I would just get rid of that conditional and just do potteryArr.push(obj) since now we would be selling cracked pottery as well.
 5. In the **Kiln** module, you have a `firePottery()` function. You need to demonstrate how to use the debugger to verify the values of the parameters for that function when your code runs. Use [Loom](https://www.loom.com/) to record your browser window with the developer tools open and show those values.
-   > Paste your video's public URL here
+   > https://www.loom.com/share/ec1aa2ec4d414683bdd327559e160f5c

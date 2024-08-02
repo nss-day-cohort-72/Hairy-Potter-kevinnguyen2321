@@ -1,5 +1,5 @@
-import { usePottery } from './pottery-catalog.js';
-const potteryCatalog = usePottery();
+// import { usePottery } from './pottery-catalog.js';
+// const potteryCatalog = usePottery();
 export const potteryList = (arr) => {
   let html = '';
   for (const pottery of arr) {
